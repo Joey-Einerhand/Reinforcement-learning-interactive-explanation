@@ -9,11 +9,11 @@ This chapter contains instructions on how to run the "completed" application (A 
 
 To run a builded version of the application, you can **either**: 
 
-1a. Build the application yourself (head over to chapter 2.3. "Building"), in which case proceed to chapter 1.2. "running with docker", or 
+​	1a. Build the application yourself (head over to chapter 2.3. "Building"), in which case proceed to chapter 1.2. "running with docker", or 
 
-1b. download a [builded version from the releases page of the GitHub repository](https://github.com/Joey-Einerhand/Reinforcement-learning-interactive-explanation/releases), in which case proceed to chapter 1.2. "running with docker", or
+​	1b. download a [builded version from the releases page of the GitHub repository](https://github.com/Joey-Einerhand/Reinforcement-learning-interactive-explanation/releases), in which case proceed to chapter 1.2. "running with docker", or
 
-1c. download a docker image (**TODO**) from [the releases page of the GitHub repository](https://github.com/Joey-Einerhand/Reinforcement-learning-interactive-explanation/releases) 
+​	1c. download a docker image (**TODO**) from [the releases page of the GitHub repository](https://github.com/Joey-Einerhand/Reinforcement-learning-interactive-explanation/releases) 
 
 #### 1.1. Running with a webserver
 
@@ -41,15 +41,11 @@ This chapter gives info on how to edit, run, and build the source code. For info
 To be able to edit, run, and build the source code, you need to install the engine this application is built on. To install the engine, install:
 
 1. Unity (Application)
-
-  1.1. Install the [**Unity hub**](https://docs.unity3d.com/Manual/GettingStartedInstallingHub.html). Any recent version is fine.
-
-  1.2. In unity hub, navigate to 'installs' install the **unity installation** which the application uses (if you open the solution as described in chapter 2.2. 'installation', it will display which version you need). The current used unity installation version is `unity version 2020.3.11f1  `
-
-  1.3. Be sure to [**install the 'webgl' module**](https://docs.unity3d.com/Manual/GettingStartedAddingEditorComponents.html) if you want to build the game so it runs on the web.
-
+  1. Install the [**Unity hub**](https://docs.unity3d.com/Manual/GettingStartedInstallingHub.html). Any recent version is fine.
+  2. In unity hub, navigate to 'installs' install the **unity installation** which the application uses (if you open the solution as described in chapter 2.2. 'installation', it will display which version you need). The current used unity installation version is `unity version 2020.3.11f1  `
+  3. Be sure to [**install the 'webgl' module**](https://docs.unity3d.com/Manual/GettingStartedAddingEditorComponents.html) if you want to build the game so it runs on the web.
 2. Python (Machine learning)
-   2.1. Install a [version of python](https://www.python.org/downloads/). We recommend getting python 3.9.0 or higher. 
+   1. Install a [version of python](https://www.python.org/downloads/). We recommend getting python 3.9.0 or higher. 
 
 
 
@@ -58,9 +54,9 @@ To be able to edit, run, and build the source code, you need to install the engi
 1. Get the source code on your local machine. If you don't know how to do this, [GitHub has a nice how-to guide.](https://docs.github.com/en/desktop/contributing-and-collaborating-using-github-desktop/adding-and-cloning-repositories/cloning-a-repository-from-github-to-github-desktop)
 2. [Add the source code as a project to your Unity Hub](https://docs.unity3d.com/2019.1/Documentation/Manual/GettingStartedOpeningProjects.html)
 3. Install the necessary Python libraries:
-   3.1.  Create a python virtual environment. Open a CMD window, navigate to the local copy of this repo on your PC, and run the command `py -m venv venv`. This creates a python virtual environment (and folder) called 'venv' in the repo.
-   3.2. run the command `venv\Scripts\activate` to activate the virtual environment.
-   3.3. Run the command `py -m pip install requirements.txt` to install  all necesarry packages into that virtual environment. 
+   1. Create a python virtual environment. Open a CMD window, navigate to the local copy of this repo on your PC, and run the command `py -m venv venv`. This creates a python virtual environment (and folder) called 'venv' in the repo.
+   2. run the command `venv\Scripts\activate` to activate the virtual environment.
+   3. Run the command `py -m pip install requirements.txt` to install  all necesarry packages into that virtual environment. 
 
 #### 2.3. Contributing
 
