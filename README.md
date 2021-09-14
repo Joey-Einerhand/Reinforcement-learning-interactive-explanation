@@ -40,12 +40,13 @@ This chapter gives info on how to edit, run, and build the source code. For info
 
 To be able to edit, run, and build the source code, you need to install the engine this application is built on. To install the engine, install:
 
-1. Unity (Application)
+* Unity (Application)
   1. Install the [**Unity hub**](https://docs.unity3d.com/Manual/GettingStartedInstallingHub.html). Any recent version is fine.
   2. In unity hub, navigate to 'installs' install the **unity installation** which the application uses (if you open the solution as described in chapter 2.2. 'installation', it will display which version you need). The current used unity installation version is `unity version 2020.3.11f1  `
   3. Be sure to [**install the 'webgl' module**](https://docs.unity3d.com/Manual/GettingStartedAddingEditorComponents.html) if you want to build the game so it runs on the web.
-2. Python (Machine learning)
-   1. Install a [version of python](https://www.python.org/downloads/). We recommend getting python 3.9.0 or higher. 
+
+* Python (Machine learning) 
+  1. Install a [version of python](https://www.python.org/downloads/). We recommend getting python 3.9.0 or higher. 
 
 
 
