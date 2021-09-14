@@ -9,11 +9,11 @@ This chapter contains instructions on how to run the "completed" application (A 
 
 To run a builded version of the application, you can **either**: 
 
-​	1a. Build the application yourself (head over to chapter 2.3. "Building"), in which case proceed to chapter 1.2. "running with docker", or 
+* Build the application yourself (head over to chapter 2.3. "Building"), in which case proceed to chapter 1.2. "running with docker", or 
 
-​	1b. download a [builded version from the releases page of the GitHub repository](https://github.com/Joey-Einerhand/Reinforcement-learning-interactive-explanation/releases), in which case proceed to chapter 1.2. "running with docker", or
+* download a [builded version from the releases page of the GitHub repository](https://github.com/Joey-Einerhand/Reinforcement-learning-interactive-explanation/releases), in which case proceed to chapter 1.2. "running with docker", or
 
-​	1c. download a docker image (**TODO**) from [the releases page of the GitHub repository](https://github.com/Joey-Einerhand/Reinforcement-learning-interactive-explanation/releases) 
+* download a docker image (**TODO**) from [the releases page of the GitHub repository](https://github.com/Joey-Einerhand/Reinforcement-learning-interactive-explanation/releases) 
 
 #### 1.1. Running with a webserver
 
