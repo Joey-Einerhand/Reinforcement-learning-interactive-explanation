@@ -15,7 +15,7 @@ To run a builded version of the application, you can **either**:
 
 * download a docker image (**TODO**) from [the releases page of the GitHub repository](https://github.com/Joey-Einerhand/Reinforcement-learning-interactive-explanation/releases) 
 
-#### 1.1. Running with a webserver
+### 1.2. Running with a webserver
 
 If you did step 1a. or 1b. you'll have access to a folder with an .html file. We recommend running the html file on a webserver*. This guide won't go into detail on how to set up a web server, but we can recommend [NGINX](https://nginx.org/en/)**. NGINX is free (as in beer and speech. It has no cost and is open source with permissive license).
 If you have a modern IDE and have a recent version php installed as an interpreter, it might be able to run the web server which is included in recent versions of php. 
@@ -26,7 +26,7 @@ If done correctly, clicking the 'play' button on the HTML page loads and runs th
 
 ** Alternatively, you can upload your files to a website that can host unity games. We recommend [www.itch.io](https://joeyehand.itch.io/reinforcement-learning). It's free. You could theoretically also run it in GitHub Pages (free), but this hasn't been tested.
 
-#### 1.2. Running with docker
+### 1.3. Running with docker
 
 # **_TODO_**
 
