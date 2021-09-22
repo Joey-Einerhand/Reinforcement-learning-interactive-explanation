@@ -5,27 +5,16 @@ using Unity.MLAgents;
 using Unity.MLAgents.Actuators;
 using Unity.MLAgents.Sensors;
 
-public class MoveToGoalAgent : Agent
+public class MoveToGoalSnake : MoveToGoalAgent
 {
-    [SerializeField] internal Collider2D rewardCollider;
-    [SerializeField] internal Collider2D agentCollider;
-    [SerializeField] internal Transform targetTransform;
-    [SerializeField] internal Color winColor;
-    [SerializeField] internal Color loseColor;
-    [SerializeField] internal SpriteRenderer floorSpriteRenderer;
-    [SerializeField] internal float movementSpeed = 2f;
+    [SerializeField] internal Snake snake;
 
     public override void OnEpisodeBegin()
     {
         base.OnEpisodeBegin();
         SetReward(0f);
-        transform.localPosition = new Vector3(Random.Range(-5.9f, 2.2f), Random.Range(-1.9f, 2.1f), 0);
-        targetTransform.localPosition = new Vector3(Random.Range(-5.9f, 2.2f), Random.Range(-1.9f, 2.1f), 0);
-        if (agentCollider.bounds.Intersects(rewardCollider.bounds))
-        {
-            targetTransform.localPosition = new Vector3(Random.Range(-5.9f, 2.2f), Random.Range(-1.9f, 2.1f), 0);
-            Debug.Log("Colliding");
-        }
+        
+
     }
 
     protected override void OnEnable()
@@ -55,7 +44,32 @@ public class MoveToGoalAgent : Agent
         float moveX = actions.ContinuousActions[0];
         float moveY = actions.ContinuousActions[1];
 
-        transform.localPosition += new Vector3(moveX, moveY, 0) * Time.deltaTime * movementSpeed;
+        // Only allow turning up or down while moving in the x-axis
+        if (snake.direction.x != 0f)
+        {
+            if (moveX > 0)
+            {
+                snake.direction = Vector2.up;
+            }
+            else if (moveX < 0)
+            {
+                snake.direction = Vector2.down;
+            }
+        }
+        // Only allow turning left or right while moving in the y-axis
+        else if (snake.direction.y != 0f)
+        {
+            if (moveY > 0)
+            {
+                snake.direction = Vector2.right;
+            }
+            else if (moveY < 0)
+            {
+                snake.direction = Vector2.left;
+            }
+        }
+
+        // moving is handled by Snake
     }
     public override void Heuristic(in ActionBuffers actionsOut)
     {
