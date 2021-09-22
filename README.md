@@ -57,7 +57,7 @@ To be able to edit, run, and build the source code, you need to install the engi
 3. Install the necessary Python libraries:
    1. Create a python virtual environment. Open a CMD window, navigate to the local copy of this repo on your PC, and run the command `py -m venv venv`. This creates a python virtual environment (and folder) called 'venv' in the repo.
    2. run the command `venv\Scripts\activate` to activate the virtual environment.
-   3. Run the command `py -m pip install requirements.txt` to install  all necesarry packages into that virtual environment. 
+   3. Run the command `py -m pip install -r requirements.txt` to install  all necesarry packages into that virtual environment. 
 
 #### 2.3. Contributing
 
