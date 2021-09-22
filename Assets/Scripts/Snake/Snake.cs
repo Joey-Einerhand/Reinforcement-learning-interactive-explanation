@@ -8,23 +8,31 @@ public class Snake : MonoBehaviour
     public Transform segmentPrefab;
     public Vector2 direction = Vector2.right;
     public int initialSize = 4;
+    public float timeSinceLastMoved;
+    public float tileSpeedPerSecond = 50f;
+    public MoveToGoalSnake moveToGoalSnake;
+    public Collider2D gridArea;
+
 
     private void Start()
     {
-        ResetState();
+        timeSinceLastMoved = Time.time;
     }
 
     private void Update()
     {
-
+        if (Time.time - timeSinceLastMoved >= (1 / tileSpeedPerSecond))
+            Move();
     }
 
-    private void FixedUpdate()
+    public void Move()
     {
+        moveToGoalSnake.RequestDecision();
         // Set each segment's position to be the same as the one it follows. We
         // must do this in reverse order so the position is set to the previous
         // position, otherwise they will all be stacked on top of each other.
-        for (int i = _segments.Count - 1; i > 0; i--) {
+        for (int i = _segments.Count - 1; i > 0; i--)
+        {
             _segments[i].position = _segments[i - 1].position;
         }
 
@@ -34,6 +42,7 @@ public class Snake : MonoBehaviour
         float y = Mathf.Round(this.transform.position.y) + this.direction.y;
 
         this.transform.position = new Vector2(x, y);
+        timeSinceLastMoved = Time.time;
     }
 
     public void Grow()
@@ -47,7 +56,7 @@ public class Snake : MonoBehaviour
     public void ResetState()
     {
         this.direction = Vector2.right;
-        this.transform.position = Vector3.zero;
+        RandomizePosition();
 
         // Start at 1 to skip destroying the head
         for (int i = 1; i < _segments.Count; i++) {
@@ -64,13 +73,19 @@ public class Snake : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
+    public void RandomizePosition()
     {
-        if (other.tag == "Food") {
-            Grow();
-        } else if (other.tag == "Obstacle") {
-            ResetState();
-        }
+        Bounds bounds = this.gridArea.bounds;
+
+        // Pick a random position inside the bounds
+        float x = Random.Range(bounds.min.x, bounds.max.x);
+        float y = Random.Range(bounds.min.y, bounds.max.y);
+
+        // Round the values to ensure it aligns with the grid
+        x = Mathf.Round(x);
+        y = Mathf.Round(y);
+
+        this.transform.position = new Vector2(x, y);
     }
 
 }

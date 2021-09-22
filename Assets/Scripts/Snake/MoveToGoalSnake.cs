@@ -5,14 +5,23 @@ using Unity.MLAgents;
 using Unity.MLAgents.Actuators;
 using Unity.MLAgents.Sensors;
 
-public class MoveToGoalSnake : MoveToGoalAgent
+public class MoveToGoalSnake : Agent
 {
     [SerializeField] internal Snake snake;
+    [SerializeField] internal Food food;
+    [SerializeField] internal Collider2D rewardCollider;
+    [SerializeField] internal Collider2D agentCollider;
+    [SerializeField] internal Transform targetTransform;
+    [SerializeField] internal Color winColor;
+    [SerializeField] internal Color loseColor;
+    [SerializeField] internal SpriteRenderer floorSpriteRenderer;
 
     public override void OnEpisodeBegin()
     {
         base.OnEpisodeBegin();
         SetReward(0f);
+        food.RandomizePosition();
+        snake.ResetState();
         
 
     }
@@ -27,7 +36,7 @@ public class MoveToGoalSnake : MoveToGoalAgent
     protected override void OnDisable()
     {
         base.OnEnable();
-        MLHandler.instance.MoveToGoalAgents.Remove(this);
+        //MLHandler.instance.MoveToGoalAgents.Remove(this);
     }
 
     public override void CollectObservations(VectorSensor sensor)
@@ -35,6 +44,7 @@ public class MoveToGoalSnake : MoveToGoalAgent
         base.CollectObservations(sensor);
         sensor.AddObservation(transform.localPosition);
         sensor.AddObservation(targetTransform.localPosition);
+        sensor.AddObservation(snake.direction);
     }
 
 
@@ -43,15 +53,17 @@ public class MoveToGoalSnake : MoveToGoalAgent
         base.OnActionReceived(actions);
         float moveX = actions.ContinuousActions[0];
         float moveY = actions.ContinuousActions[1];
+        Debug.Log(moveX);
+        Debug.Log(moveY);
 
         // Only allow turning up or down while moving in the x-axis
         if (snake.direction.x != 0f)
         {
-            if (moveX > 0)
+            if (moveY > 0)
             {
                 snake.direction = Vector2.up;
             }
-            else if (moveX < 0)
+            else if (moveY < 0)
             {
                 snake.direction = Vector2.down;
             }
@@ -59,11 +71,11 @@ public class MoveToGoalSnake : MoveToGoalAgent
         // Only allow turning left or right while moving in the y-axis
         else if (snake.direction.y != 0f)
         {
-            if (moveY > 0)
+            if (moveX > 0)
             {
                 snake.direction = Vector2.right;
             }
-            else if (moveY < 0)
+            else if (moveX < 0)
             {
                 snake.direction = Vector2.left;
             }
@@ -87,7 +99,8 @@ public class MoveToGoalSnake : MoveToGoalAgent
         {
             SetReward(+1f);
             floorSpriteRenderer.color = winColor;
-            EndEpisode();
+            food.RandomizePosition();
+            snake.Grow();
         }
         else if (other.TryGetComponent<Wall>(out Wall wall))
         {
