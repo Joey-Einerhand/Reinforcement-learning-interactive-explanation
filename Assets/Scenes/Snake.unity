@@ -241,60 +241,112 @@ LightingSettings:
   m_PVRFilteringAtrousPositionSigmaDirect: 0.5
   m_PVRFilteringAtrousPositionSigmaIndirect: 2
   m_PVRFilteringAtrousPositionSigmaAO: 1
---- !u!1001 &930747302435942430
+--- !u!1001 &835703415788836071
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 930747303676068236, guid: f9ab44621ce57c64d8e883f5b64f4401, type: 3}
-      propertyPath: m_Name
-      value: SnakeEnvironment
-      objectReference: {fileID: 0}
-    - target: {fileID: 930747303676068237, guid: f9ab44621ce57c64d8e883f5b64f4401, type: 3}
+    - target: {fileID: 835703415487471448, guid: f9ab44621ce57c64d8e883f5b64f4401, type: 3}
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 930747303676068237, guid: f9ab44621ce57c64d8e883f5b64f4401, type: 3}
+    - target: {fileID: 835703415487471448, guid: f9ab44621ce57c64d8e883f5b64f4401, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2.2541008
       objectReference: {fileID: 0}
-    - target: {fileID: 930747303676068237, guid: f9ab44621ce57c64d8e883f5b64f4401, type: 3}
+    - target: {fileID: 835703415487471448, guid: f9ab44621ce57c64d8e883f5b64f4401, type: 3}
       propertyPath: m_LocalPosition.y
       value: -4.814298
       objectReference: {fileID: 0}
-    - target: {fileID: 930747303676068237, guid: f9ab44621ce57c64d8e883f5b64f4401, type: 3}
+    - target: {fileID: 835703415487471448, guid: f9ab44621ce57c64d8e883f5b64f4401, type: 3}
       propertyPath: m_LocalPosition.z
       value: -1251.6243
       objectReference: {fileID: 0}
-    - target: {fileID: 930747303676068237, guid: f9ab44621ce57c64d8e883f5b64f4401, type: 3}
+    - target: {fileID: 835703415487471448, guid: f9ab44621ce57c64d8e883f5b64f4401, type: 3}
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 930747303676068237, guid: f9ab44621ce57c64d8e883f5b64f4401, type: 3}
+    - target: {fileID: 835703415487471448, guid: f9ab44621ce57c64d8e883f5b64f4401, type: 3}
       propertyPath: m_LocalRotation.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 930747303676068237, guid: f9ab44621ce57c64d8e883f5b64f4401, type: 3}
+    - target: {fileID: 835703415487471448, guid: f9ab44621ce57c64d8e883f5b64f4401, type: 3}
       propertyPath: m_LocalRotation.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 930747303676068237, guid: f9ab44621ce57c64d8e883f5b64f4401, type: 3}
+    - target: {fileID: 835703415487471448, guid: f9ab44621ce57c64d8e883f5b64f4401, type: 3}
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 930747303676068237, guid: f9ab44621ce57c64d8e883f5b64f4401, type: 3}
+    - target: {fileID: 835703415487471448, guid: f9ab44621ce57c64d8e883f5b64f4401, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 930747303676068237, guid: f9ab44621ce57c64d8e883f5b64f4401, type: 3}
+    - target: {fileID: 835703415487471448, guid: f9ab44621ce57c64d8e883f5b64f4401, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 930747303676068237, guid: f9ab44621ce57c64d8e883f5b64f4401, type: 3}
+    - target: {fileID: 835703415487471448, guid: f9ab44621ce57c64d8e883f5b64f4401, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 835703415487471449, guid: f9ab44621ce57c64d8e883f5b64f4401, type: 3}
+      propertyPath: m_Name
+      value: SnakeEnvironment
+      objectReference: {fileID: 0}
+    - target: {fileID: 835703415752912857, guid: f9ab44621ce57c64d8e883f5b64f4401, type: 3}
+      propertyPath: m_BodyType
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 835703415752912857, guid: f9ab44621ce57c64d8e883f5b64f4401, type: 3}
+      propertyPath: m_AngularDrag
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 835703415752912857, guid: f9ab44621ce57c64d8e883f5b64f4401, type: 3}
+      propertyPath: m_GravityScale
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 835703415752912859, guid: f9ab44621ce57c64d8e883f5b64f4401, type: 3}
+      propertyPath: initialSize
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 835703415752912859, guid: f9ab44621ce57c64d8e883f5b64f4401, type: 3}
+      propertyPath: tileSpeedPerSecond
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 835703415752912860, guid: f9ab44621ce57c64d8e883f5b64f4401, type: 3}
+      propertyPath: m_BrainParameters.VectorActionSpaceType
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 835703415752912860, guid: f9ab44621ce57c64d8e883f5b64f4401, type: 3}
+      propertyPath: m_BrainParameters.VectorActionSize.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 835703415752912860, guid: f9ab44621ce57c64d8e883f5b64f4401, type: 3}
+      propertyPath: m_BrainParameters.VectorActionSize.Array.data[0]
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 835703415752912860, guid: f9ab44621ce57c64d8e883f5b64f4401, type: 3}
+      propertyPath: m_BrainParameters.VectorActionSize.Array.data[1]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 835703415752912860, guid: f9ab44621ce57c64d8e883f5b64f4401, type: 3}
+      propertyPath: m_BrainParameters.m_ActionSpec.BranchSizes.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 835703415752912860, guid: f9ab44621ce57c64d8e883f5b64f4401, type: 3}
+      propertyPath: m_BrainParameters.m_ActionSpec.m_NumContinuousActions
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 835703415752912860, guid: f9ab44621ce57c64d8e883f5b64f4401, type: 3}
+      propertyPath: m_BrainParameters.m_ActionSpec.BranchSizes.Array.data[0]
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 835703415752912860, guid: f9ab44621ce57c64d8e883f5b64f4401, type: 3}
+      propertyPath: m_BrainParameters.m_ActionSpec.BranchSizes.Array.data[1]
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f9ab44621ce57c64d8e883f5b64f4401, type: 3}

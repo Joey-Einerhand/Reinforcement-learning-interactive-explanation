@@ -27,7 +27,7 @@ public class Snake : MonoBehaviour
 
     public void Move()
     {
-        moveToGoalSnake.RequestDecision();
+
         // Set each segment's position to be the same as the one it follows. We
         // must do this in reverse order so the position is set to the previous
         // position, otherwise they will all be stacked on top of each other.
@@ -48,9 +48,11 @@ public class Snake : MonoBehaviour
     public void Grow()
     {
         Transform segment = Instantiate(this.segmentPrefab);
+        SnakeSegment snakeSegment = segment.GetComponent<SnakeSegment>();
         segment.position = _segments[_segments.Count - 1].position;
 
         _segments.Add(segment);
+        snakeSegment.snakeSegmentNumber = _segments.Count - 1;
     }
 
     public void ResetState()

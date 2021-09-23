@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4726879341727194398}
   - component: {fileID: 4726879341727194399}
   - component: {fileID: 4726879341727194384}
+  - component: {fileID: 4659262795485202416}
   m_Layer: 0
   m_Name: SnakeSegment
   m_TagString: Obstacle
@@ -131,3 +132,15 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.75, y: 0.75}
   m_EdgeRadius: 0
+--- !u!114 &4659262795485202416
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4726879341727194386}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a04b94778d1ddc24987f51c8082a2a96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
