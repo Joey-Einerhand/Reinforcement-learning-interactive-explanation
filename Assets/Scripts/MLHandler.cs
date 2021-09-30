@@ -2,12 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Unity.Barracuda;
+using Unity.MLAgents;
 
 public class MLHandler : MonoBehaviour
 {
     // A list of all currently active moveToGoal agents.
     // Agents add/remove themself from this list when enabled/disabled.
-    [SerializeField] List<MoveToGoalAgent> moveToGoalAgents = new List<MoveToGoalAgent>();
+    [SerializeField] List<Agent> agents = new List<Agent>();
     [SerializeField] List<NNModel> brainModels = new List<NNModel>();
 
     // Global accessor, used so other classes can call an existing MLHandler instance without having a direct
@@ -30,17 +31,28 @@ public class MLHandler : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        GetAllAgentsInScene();
     }
+    
+    public void GetAllAgentsInScene()
+    {
+        // get all objects with agent tag in scene, get their agent script and add those to our list
+        // this is used to assign brains
+        GameObject[] agentObjectsInScene = GameObject.FindGameObjectsWithTag("Agent");
+        foreach (GameObject agentGameObject in agentObjectsInScene)
+        {
+            agents.Add(agentGameObject.GetComponent<Agent>());
+        }
+    }    
 
     public void ChangeAgentBrain(int brainIndexToUse)
     {
         Debug.Log("Changing brain");
-        foreach (MoveToGoalAgent agent in moveToGoalAgents)
+        foreach (Agent agent in agents)
         {
             agent.SetModel("MoveToGoal", brainModels[brainIndexToUse]);
         }
     }
 
-    public List<MoveToGoalAgent> MoveToGoalAgents { get => moveToGoalAgents; set => moveToGoalAgents = value; }
+    public List<Agent> Agents { get => agents; set => agents = value; }
 }

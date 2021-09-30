@@ -26,54 +26,53 @@ public class MoveToGoalSnake : Agent
 
     }
 
-    protected override void OnEnable()
-    {
-        base.OnEnable();
-        
-        //MLHandler.instance.MoveToGoalAgents.Add(this);
-    }
-
-    protected override void OnDisable()
-    {
-        base.OnEnable();
-        //MLHandler.instance.MoveToGoalAgents.Remove(this);
-    }
-
     public override void CollectObservations(VectorSensor sensor)
     {
         base.CollectObservations(sensor);
-        sensor.AddObservation(transform.localPosition);
-        sensor.AddObservation(targetTransform.localPosition);
-        sensor.AddObservation(snake.direction);
+        Vector2 normalisedAgentLocation = new Vector2(
+                                                        (transform.position.x - snake.bounds.min.x) / (snake.bounds.max.x - snake.bounds.min.x),
+                                                        (transform.position.y - snake.bounds.min.y) / (snake.bounds.max.y - snake.bounds.min.y)
+                                                    );
+        Vector2 normalisedGoalLocation = new Vector2(
+                                                (targetTransform.position.x - snake.bounds.min.x) / (snake.bounds.max.x - snake.bounds.min.x),
+                                                (targetTransform.position.y - snake.bounds.min.y) / (snake.bounds.max.y - snake.bounds.min.y)
+                                            );
+        sensor.AddObservation(normalisedAgentLocation);
+        sensor.AddObservation(normalisedGoalLocation);
+        //sensor.AddObservation(snake.direction);
     }
 
 
     public override void OnActionReceived(ActionBuffers actions)
     {
         base.OnActionReceived(actions);
-        // [0, 1, 2, 3, 4]
-        // 0 = forward (no change), 1 = left (-90 degrees), 2 = right (+90 degrees)
+        // [0, 1, 2, 3]
+        // left, right, up, down
         int directionToTurnTo = actions.DiscreteActions[0];
         Debug.Log(directionToTurnTo);
 
         switch (directionToTurnTo)
         {
             case (0):
+                if (snake.direction != Vector2.right)
+                    snake.direction = Vector2.left;
                 break;
             case (1):
-                snake.direction = Vector2.left;
+                if (snake.direction != Vector2.left)
+                    snake.direction = Vector2.right;
                 break;
             case (2):
-                snake.direction = Vector2.right;
+                if (snake.direction != Vector2.down)
+                    snake.direction = Vector2.up;
                 break;
             case (3):
-                snake.direction = Vector2.up;
+                if (snake.direction != Vector2.up)
+                    snake.direction = Vector2.down;
                 break;
-            case (4):
-                snake.direction = Vector2.down;
-                break;
+
         }
-        // moving is handled by Snake
+
+        //snake.Move();
     }
     public override void Heuristic(in ActionBuffers actionsOut)
     {
@@ -82,23 +81,19 @@ public class MoveToGoalSnake : Agent
         ActionSegment<int> discreteActions = actionsOut.DiscreteActions;
         if (Input.GetAxis("Horizontal") < 0)
         {
-            discreteActions[0] = 1;
+            discreteActions[0] = 0;
         }
         else if (Input.GetAxis("Horizontal") > 0)
         {
-            discreteActions[0] = 2;
+            discreteActions[0] = 1;
         }
         else if (Input.GetAxis("Vertical") > 0)
         {
-            discreteActions[0] = 3;
+            discreteActions[0] = 2;
         }
         else if (Input.GetAxis("Vertical") < 0)
         {
-            discreteActions[0] = 4;
-        }
-        else
-        {
-            discreteActions[0] = 0;
+            discreteActions[0] = 3;
         }
     }
 

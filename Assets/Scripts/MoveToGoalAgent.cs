@@ -28,18 +28,6 @@ public class MoveToGoalAgent : Agent
         }
     }
 
-    protected override void OnEnable()
-    {
-        base.OnEnable();
-        
-        //MLHandler.instance.MoveToGoalAgents.Add(this);
-    }
-
-    protected override void OnDisable()
-    {
-        base.OnEnable();
-        MLHandler.instance.MoveToGoalAgents.Remove(this);
-    }
 
     public override void CollectObservations(VectorSensor sensor)
     {

@@ -12,17 +12,25 @@ public class Snake : MonoBehaviour
     public float tileSpeedPerSecond = 50f;
     public MoveToGoalSnake moveToGoalSnake;
     public Collider2D gridArea;
+    public Bounds bounds;
 
 
     private void Start()
     {
         timeSinceLastMoved = Time.time;
+        bounds = this.gridArea.bounds;
+        RandomizePosition();
     }
 
     private void Update()
     {
         if (Time.time - timeSinceLastMoved >= (1 / tileSpeedPerSecond))
+        {
+            moveToGoalSnake.RequestDecision();
             Move();
+            
+        }
+
     }
 
     public void Move()
@@ -43,6 +51,7 @@ public class Snake : MonoBehaviour
 
         this.transform.position = new Vector2(x, y);
         timeSinceLastMoved = Time.time;
+        
     }
 
     public void Grow()
@@ -77,7 +86,7 @@ public class Snake : MonoBehaviour
 
     public void RandomizePosition()
     {
-        Bounds bounds = this.gridArea.bounds;
+        
 
         // Pick a random position inside the bounds
         float x = Random.Range(bounds.min.x, bounds.max.x);
