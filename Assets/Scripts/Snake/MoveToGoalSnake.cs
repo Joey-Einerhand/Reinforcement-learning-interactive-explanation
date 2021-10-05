@@ -49,7 +49,7 @@ public class MoveToGoalSnake : Agent
         // [0, 1, 2, 3]
         // left, right, up, down
         int directionToTurnTo = actions.DiscreteActions[0];
-        Debug.Log(directionToTurnTo);
+        //Debug.Log(directionToTurnTo);
 
         switch (directionToTurnTo)
         {

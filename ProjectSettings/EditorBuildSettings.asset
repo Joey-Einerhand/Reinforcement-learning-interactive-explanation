@@ -12,6 +12,6 @@ EditorBuildSettings:
     path: Assets/Scenes/TopDown.unity
     guid: fc7a3abe13d1cab42af2ef496c359674
   - enabled: 1
-    path: Assets/Scenes/Snake.unity
+    path: Assets/Scenes/SnakeClassic.unity
     guid: a1c7356d036a2ce49afd14bf90b2cd8a
   m_configObjects: {}
