@@ -1,0 +1,29 @@
+{
+    "SeekFood": {
+        "checkpoints": [
+            {
+                "steps": 9129,
+                "file_path": "results\\testsnaketiles\\SeekFood\\SeekFood-9129.onnx",
+                "reward": -0.9883381924198251,
+                "creation_time": 1633643583.7452998,
+                "auxillary_file_paths": [
+                    "results\\testsnaketiles\\SeekFood\\SeekFood-9129.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 9129,
+            "file_path": "results\\testsnaketiles\\SeekFood.onnx",
+            "reward": -0.9883381924198251,
+            "creation_time": 1633643583.7452998,
+            "auxillary_file_paths": [
+                "results\\testsnaketiles\\SeekFood\\SeekFood-9129.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.27.0",
+        "torch_version": "1.7.1+cu110"
+    }
+}
