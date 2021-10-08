@@ -76,7 +76,7 @@ public class MoveToGoalSnakeTileBased : Agent
         // manual moving
         base.Heuristic(actionsOut);
         ActionSegment<int> discreteActions = actionsOut.DiscreteActions;
-        Debug.Log(Input.GetAxisRaw("Horizontal"));
+
         float horizontalMovementDirection = Input.GetAxisRaw("Horizontal");
         float verticalMovementDirection = Input.GetAxisRaw("Horizontal");
         if (horizontalMovementDirection < 0)

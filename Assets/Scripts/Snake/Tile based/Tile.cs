@@ -18,9 +18,10 @@ public class Tile : MonoBehaviour
     GridManager ownGridManager;
     int[] coordinateInGrid = new int[2];
 
+    // these are default; edit the colors in the editor
     [SerializeField] Color emptyColor = Color.gray;
     [SerializeField] Color wallColor = Color.black;
-    [SerializeField] Color rewardColor = Color.yellow;
+    [SerializeField] Color rewardColor = Color.red;
     [SerializeField] Color snakeHeadColor = Color.blue;
     [SerializeField] Color snakeBodyColor = Color.cyan;
 

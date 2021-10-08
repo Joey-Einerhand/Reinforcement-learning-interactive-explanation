@@ -99,6 +99,6 @@ MonoBehaviour:
   ownSpriteRenderer: {fileID: 6448028138713305278}
   emptyColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
   wallColor: {r: 0, g: 0, b: 0, a: 1}
-  rewardColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  rewardColor: {r: 1, g: 0.23231441, b: 0.015686274, a: 1}
   snakeHeadColor: {r: 0, g: 0, b: 1, a: 1}
   snakeBodyColor: {r: 0, g: 1, b: 1, a: 1}

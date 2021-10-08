@@ -25,6 +25,8 @@ public class GridManager : MonoBehaviour
     {
         Debug.Log("generating grid..");
         Bounds boundsOfAreaToFill = areaToFillWithGrid.bounds;
+        // Try to have the location of the bounds to not have a decimal.
+        // if it's not, the amount of tiles might differ based on location due to rounding
         amountOfTilesHorizontally = (int)(boundsOfAreaToFill.size.x / tileWidth);
         amountOfTilesVertically = (int)(boundsOfAreaToFill.size.y / tileHeight);
         float firstTileX = transform.position.x + (tileWidth / 2f) - ((int)(amountOfTilesHorizontally / 2) * tileWidth);
@@ -83,8 +85,6 @@ public class GridManager : MonoBehaviour
     {
         int yIndex = Random.Range(0, amountOfTilesVertically - 1);
         int xIndex = Random.Range(0, amountOfTilesHorizontally - 1);
-        Debug.Log(xIndex + " " + yIndex);
-        Debug.Log(tiles[xIndex][yIndex]);
         return tiles[xIndex][yIndex];
     }
 }

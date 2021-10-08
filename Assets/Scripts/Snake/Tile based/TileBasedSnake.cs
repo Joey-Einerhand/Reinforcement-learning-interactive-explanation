@@ -86,6 +86,7 @@ public class TileBasedSnake : MonoBehaviour
         // else, eat normal food
         else
         {
+            Debug.Log("Eating food..");
             EatFood(1, 1);
             Move(tileToMoveInto);
         }
@@ -106,7 +107,7 @@ public class TileBasedSnake : MonoBehaviour
                 segmentToMove.CurrentTile.ChangeTileContentType(ContentType.empty);
             }
             // if first segment, set current tile to be the head's tile
-            else if (i == 0)
+            if (i == 0)
             {
                 segmentToMove.CurrentTile = currentLocationOfHead;
             }
@@ -127,8 +128,10 @@ public class TileBasedSnake : MonoBehaviour
 
     public void EatFood(int reward, int amountToGrow)
     {
+        Debug.Log("Eating..");
         moveToGoalSnakeTileBased.AddReward(1);
-        environmentFood.RandomizePosition();
+        environmentFood.RandomizePositionDebug();
+        //environmentFood.RandomizePosition();
         Grow(amountToGrow);
     }
 
@@ -150,7 +153,7 @@ public class TileBasedSnake : MonoBehaviour
             snakeSegment.CurrentTile = currentLocationOfHead;
 
             _segments.Add(snakeSegment);
-            
+
         }
     }
 
@@ -164,8 +167,7 @@ public class TileBasedSnake : MonoBehaviour
         this.direction = Vector2.right;
         RandomizePosition();
 
-        // Start at 1 to skip destroying the head
-        for (int i = 1; i < _segments.Count; i++) {
+        for (int i = 0; i < _segments.Count; i++) {
             Destroy(_segments[i].gameObject);
         }
 
