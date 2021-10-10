@@ -5,19 +5,19 @@ A small interactive experience which aims to teach how reinforcement learning wo
 
 This chapter contains instructions on how to run the "completed" application (A builded version). If you instead want instructions on how to run and change the source code, head over to chapter 2. "Editing".
 
-### 1.1. downloading
+### 1.1. Downloading
 
 To run a builded version of the application, you can **either**: 
 
-* Build the application yourself (head over to chapter 2.3. "Building"), in which case proceed to chapter 1.2. "running with docker", or 
+* Build the application yourself (head over to chapter 2.4. "Building"), in which case proceed to chapter 1.3. "Running with Docker", or 
 
-* download a [builded version from the releases page of the GitHub repository](https://github.com/Joey-Einerhand/Reinforcement-learning-interactive-explanation/releases), in which case proceed to chapter 1.2. "running with docker", or
+* download a [builded version from the releases page of the GitHub repository](https://github.com/Joey-Einerhand/Reinforcement-learning-interactive-explanation/releases), in which case proceed to chapter 1.3. "Running with Docker", or
 
-* download a docker image (**TODO**) from [the releases page of the GitHub repository](https://github.com/Joey-Einerhand/Reinforcement-learning-interactive-explanation/releases) 
+* download a Docker image (**TODO**) from [the releases page of the GitHub repository](https://github.com/Joey-Einerhand/Reinforcement-learning-interactive-explanation/releases) 
 
 ### 1.2. Running with a webserver
 
-If you did step 1a. or 1b. you'll have access to a folder with an .html file. We recommend running the html file on a webserver*. This guide won't go into detail on how to set up a web server, but we can recommend [NGINX](https://nginx.org/en/)**. NGINX is free (as in beer and speech. It has no cost and is open source with permissive license).
+If you did step 1.1a. or 1.1b. you'll have access to a folder with an .html file. We recommend running the html file on a webserver*. This guide won't go into detail on how to set up a web server, but we can recommend [NGINX](https://nginx.org/en/)**. NGINX is free (as in beer and speech. It has no cost and is open source with permissive license).
 If you have a modern IDE and have a recent version php installed as an interpreter, it might be able to run the web server which is included in recent versions of php. 
 
 If done correctly, clicking the 'play' button on the HTML page loads and runs the application correctly.
@@ -26,7 +26,16 @@ If done correctly, clicking the 'play' button on the HTML page loads and runs th
 
 ** Alternatively, you can upload your files to a website that can host unity games. We recommend [www.itch.io](https://joeyehand.itch.io/reinforcement-learning). It's free. You could theoretically also run it in GitHub Pages (free), but this hasn't been tested.
 
-### 1.3. Running with docker
+### 1.3. Running with Docker
+
+To run the the application using Docker you need to have a builded version of the applications using [WebGL](https://get.webgl.org/). In order to get this version you can head over to chapter 2.4. "Building". You also need to have [Docker](https://docs.docker.com/get-docker/) downloaded on your machine. When you meet these requirements you can use the folowing instructions to run your build inside a Docker-container.
+
+1. Download the DockerFile for the application from GitHub.
+2. Place the Dockerfile inside the folder of the build, inside the same directory as the index.html-file.
+3. Navigate to the folder of the build using the terminal.
+4. Run the following command `docker build -t demonstrator .` to build an image of the build using the DockerFile.
+5. Run the following command `docker run -p 8080:80 -d demonstrator` to run an instance of the image inside a Docker container.
+6. Navigate to the following URL [http://localhost:8080/test/](http://localhost:8080/test/) to interact with the container.
 
 # **_TODO_**
 
@@ -79,7 +88,7 @@ This chapter will discuss how to build the application to WebGL, to make it able
 
 #### 2.5. Creating a release
 
-# _TODO **something about docker**_
+# _TODO **something about Docker**_
 
 # 3. How to use machine learning in this project?
 
