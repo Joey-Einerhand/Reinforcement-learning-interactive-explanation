@@ -1,0 +1,38 @@
+{
+    "SeekFood": {
+        "checkpoints": [
+            {
+                "steps": 499942,
+                "file_path": "results\\snaketesttilebased4\\SeekFood\\SeekFood-499942.onnx",
+                "reward": -9.625,
+                "creation_time": 1634062975.3273761,
+                "auxillary_file_paths": [
+                    "results\\snaketesttilebased4\\SeekFood\\SeekFood-499942.pt"
+                ]
+            },
+            {
+                "steps": 500006,
+                "file_path": "results\\snaketesttilebased4\\SeekFood\\SeekFood-500006.onnx",
+                "reward": -9.625,
+                "creation_time": 1634062975.3603764,
+                "auxillary_file_paths": [
+                    "results\\snaketesttilebased4\\SeekFood\\SeekFood-500006.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 500006,
+            "file_path": "results\\snaketesttilebased4\\SeekFood.onnx",
+            "reward": -9.625,
+            "creation_time": 1634062975.3603764,
+            "auxillary_file_paths": [
+                "results\\snaketesttilebased4\\SeekFood\\SeekFood-500006.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.27.0",
+        "torch_version": "1.7.1+cu110"
+    }
+}

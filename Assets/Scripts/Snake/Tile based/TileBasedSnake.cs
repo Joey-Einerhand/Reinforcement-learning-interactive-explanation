@@ -133,6 +133,9 @@ public class TileBasedSnake : MonoBehaviour
         currentLocationOfHead = tileToMoveInto;
         transform.position = tileToMoveInto.transform.position;
         tileToMoveInto.ChangeTileContentType(ContentType.snake);
+
+        // give negative reward for movement to encourage going to food asap
+        moveToGoalSnakeTileBased.Discounting();
     }
 
     public void EatFood(int reward, int amountToGrow)

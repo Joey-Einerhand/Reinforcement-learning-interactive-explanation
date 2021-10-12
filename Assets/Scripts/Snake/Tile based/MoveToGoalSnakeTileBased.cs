@@ -95,10 +95,25 @@ public class MoveToGoalSnakeTileBased : Agent
         }
     }
 
+    /// <summary>
+    /// Adds a negative reward per step the snake sets. Prevents snake from improving livespan but not improving reward
+    /// </summary>
+    /// Should be less than (reward for eating food / (amount of tiles in field - 1)) to prevent snake from suiciding 
+    /// because getting to the reward would be more punishing than getting the reward
+    public void Discounting()
+    {
+        // calculation is done here to support editing of field size mid-play
+        float maxAmountOfTilesToMove = (environmentGridManager.AmountOfTilesHorizontally * environmentGridManager.AmountOfTilesVertically) - 1;
+        // Assuming there's only one type of food and it gives exactly 1 reward when eaten
+        // make the reward negative to punish snake for taking steps
+        float maxNegativeRewardForStep = -1 * (1 / maxAmountOfTilesToMove);
+        //AddReward(maxNegativeRewardForStep);
+        AddReward(-0.05f);
+    }
 
     public void EndGame()
     {
-        AddNegativeAward(-10f);
+        AddNegativeAward(-2f);
         EndEpisode();
 
 

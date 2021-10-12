@@ -1,0 +1,47 @@
+{
+    "name": "root",
+    "metadata": {
+        "timer_format_version": "0.1.0",
+        "start_time_seconds": "1634072967",
+        "python_version": "3.9.5 (tags/v3.9.5:0a7dcbd, May  3 2021, 17:27:52) [MSC v.1928 64 bit (AMD64)]",
+        "command_line_arguments": "D:\\Code\\GitAndGithub\\Reinforcement-learning-interactive-explanation\\pythonvirtenvironment\\Scripts\\mlagents-learn --run-id=snaketesttilebasedWithDiscounting --force",
+        "mlagents_version": "0.27.0",
+        "mlagents_envs_version": "0.27.0",
+        "communication_protocol_version": "1.5.0",
+        "pytorch_version": "1.7.1+cu110",
+        "numpy_version": "1.21.2",
+        "end_time_seconds": "1634072970"
+    },
+    "total": 3.2909978000000004,
+    "count": 1,
+    "self": 0.0036397000000003565,
+    "children": {
+        "run_training.setup": {
+            "total": 0.07290660000000004,
+            "count": 1,
+            "self": 0.07290660000000004
+        },
+        "TrainerController.start_learning": {
+            "total": 3.2144515,
+            "count": 1,
+            "self": 0.00029199999999951487,
+            "children": {
+                "TrainerController._reset_env": {
+                    "total": 3.2141509999999998,
+                    "count": 1,
+                    "self": 3.2141509999999998
+                },
+                "trainer_threads": {
+                    "total": 8.000000004670937e-07,
+                    "count": 1,
+                    "self": 8.000000004670937e-07
+                },
+                "TrainerController._save_models": {
+                    "total": 7.70000000027693e-06,
+                    "count": 1,
+                    "self": 7.70000000027693e-06
+                }
+            }
+        }
+    }
+}

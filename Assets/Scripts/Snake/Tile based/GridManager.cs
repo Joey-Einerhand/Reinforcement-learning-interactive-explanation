@@ -17,6 +17,8 @@ public class GridManager : MonoBehaviour
     int amountOfTilesHorizontally;
     int amountOfTilesVertically;
 
+
+
     private void Awake()
     {
         GenerateGrid();
@@ -27,15 +29,15 @@ public class GridManager : MonoBehaviour
         Bounds boundsOfAreaToFill = areaToFillWithGrid.bounds;
         // Try to have the location of the bounds to not have a decimal.
         // if it's not, the amount of tiles might differ based on location due to rounding
-        amountOfTilesHorizontally = (int)(boundsOfAreaToFill.size.x / tileWidth);
-        amountOfTilesVertically = (int)(boundsOfAreaToFill.size.y / tileHeight);
-        float firstTileX = transform.position.x + (tileWidth / 2f) - ((int)(amountOfTilesHorizontally / 2) * tileWidth);
-        float firstTileY = transform.position.y + (tileHeight / 2f) - ((int)(amountOfTilesVertically / 2) * tileHeight);
-        for (int x = 0; x < amountOfTilesHorizontally; x++)
+        AmountOfTilesHorizontally = (int)(boundsOfAreaToFill.size.x / tileWidth);
+        AmountOfTilesVertically = (int)(boundsOfAreaToFill.size.y / tileHeight);
+        float firstTileX = transform.position.x + (tileWidth / 2f) - ((int)(AmountOfTilesHorizontally / 2) * tileWidth);
+        float firstTileY = transform.position.y + (tileHeight / 2f) - ((int)(AmountOfTilesVertically / 2) * tileHeight);
+        for (int x = 0; x < AmountOfTilesHorizontally; x++)
         {
             tileContent.Add(new List<float>());
             tiles.Add(new List<Tile>());
-            for (int y = 0; y < amountOfTilesVertically; y++)
+            for (int y = 0; y < AmountOfTilesVertically; y++)
             {
                 
                 float xToSpawnTileAt = firstTileX + (x * tileWidth);
@@ -56,9 +58,9 @@ public class GridManager : MonoBehaviour
     public void ResetGridContent()
     {
         // reset numbers array first, it'll be changed by changing the tile classes themselves
-        for (int i = 0; i < amountOfTilesHorizontally - 1; i++)
+        for (int i = 0; i < AmountOfTilesHorizontally - 1; i++)
         {
-            for (int j = 0; j < amountOfTilesVertically - 1; j++)
+            for (int j = 0; j < AmountOfTilesVertically - 1; j++)
             {
                 tileContent[i][j] = 0;
 
@@ -70,7 +72,7 @@ public class GridManager : MonoBehaviour
             foreach (Tile tile in horizontalRow)
             {
                 // if the tile is a boundary, change the tile type to be a wall.
-                if (tile.CoordinateInGrid[0] == 0 || tile.CoordinateInGrid[0] == amountOfTilesHorizontally - 1 || tile.CoordinateInGrid[1] == 0 || tile.CoordinateInGrid[1] == amountOfTilesVertically - 1)
+                if (tile.CoordinateInGrid[0] == 0 || tile.CoordinateInGrid[0] == AmountOfTilesHorizontally - 1 || tile.CoordinateInGrid[1] == 0 || tile.CoordinateInGrid[1] == AmountOfTilesVertically - 1)
                 {
                     tile.ChangeTileContentType(ContentType.wall);
                 }
@@ -84,8 +86,29 @@ public class GridManager : MonoBehaviour
 
     public Tile GetRandomTile()
     {
-        int yIndex = Random.Range(0, amountOfTilesVertically - 1);
-        int xIndex = Random.Range(0, amountOfTilesHorizontally - 1);
+        int yIndex = Random.Range(0, AmountOfTilesVertically - 1);
+        int xIndex = Random.Range(0, AmountOfTilesHorizontally - 1);
         return tiles[xIndex][yIndex];
     }
+
+    // this could be handled better by keeping track of these variables and changing them when a tile's content changes, instead of
+    // looping through the entire 2d array.
+    public int GetAmountOfTilesWithContent(ContentType typeToCheckFor)
+    {
+        int amountOfTilesWithContent = 0;
+        foreach (List<Tile> horizontalRow in tiles)
+        {
+            foreach (Tile tile in horizontalRow)
+            {
+                if (tile.TileContentType == typeToCheckFor)
+                {
+                    amountOfTilesWithContent++;
+                }
+            }
+        }
+        return amountOfTilesWithContent;
+    }
+
+    public int AmountOfTilesHorizontally { get => amountOfTilesHorizontally; set => amountOfTilesHorizontally = value; }
+    public int AmountOfTilesVertically { get => amountOfTilesVertically; set => amountOfTilesVertically = value; }
 }

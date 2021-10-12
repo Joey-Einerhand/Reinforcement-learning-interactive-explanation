@@ -7,12 +7,22 @@ public class FoodTileBased : MonoBehaviour
 
     public void RandomizePosition()
     {
+        // It's possible that there are no empty tiles left in the field, which means the snake fills the entire board (minus walls)
+        // So make sure we're not getting into an infinite loop
+        int amountOfEmptyTilesInGrid = environmentGridManager.GetAmountOfTilesWithContent(ContentType.empty);
+        if (amountOfEmptyTilesInGrid == 0)
+        {
+            // TODO: Do something to indicate game is over. For now, just return to stop trying to place the food in a filled grid
+            return;
+        }
 
-        
+
         Tile randomTile = EnvironmentGridManager.GetRandomTile();
         while (randomTile.TileContentType != ContentType.empty)
         {
             randomTile = EnvironmentGridManager.GetRandomTile();
+
+
         }
 
         // needs to be executed after getting a random new tile, else the current tile might be a
