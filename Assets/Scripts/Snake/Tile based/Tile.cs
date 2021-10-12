@@ -34,7 +34,7 @@ public class Tile : MonoBehaviour
         tileContentType = typeToChangeTo;
         // sets the int in the array to the index of the enum
         // 0 = empty, 1 = wall, etc
-        ownGridManager.tileContent[coordinateInGrid[0]][coordinateInGrid[1]] = (int)typeToChangeTo;
+        ownGridManager.tileContent[coordinateInGrid[0]][coordinateInGrid[1]] = (float)typeToChangeTo;
 
         switch(typeToChangeTo)
         {

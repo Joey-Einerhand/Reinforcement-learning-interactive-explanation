@@ -23,13 +23,14 @@ public class FoodTileBased : MonoBehaviour
         }
         currentTile = randomTile;
         currentTile.ChangeTileContentType(ContentType.reward);
+        //transform.position = currentTile.transform.position;
         transform.position = currentTile.transform.position;
     }
 
     public void RandomizePositionDebug()
     {
 
-
+        // get a random empty tile in the field
         Tile randomTile = EnvironmentGridManager.GetRandomTile();
         while (randomTile.TileContentType != ContentType.empty)
         {
@@ -41,14 +42,17 @@ public class FoodTileBased : MonoBehaviour
         if (currentTile != null)
         {
             currentTile.ChangeTileContentType(ContentType.empty);
-            Debug.Log(currentTile.CoordinateInGrid[0] + " " + currentTile.CoordinateInGrid[1] + "--" + randomTile.CoordinateInGrid[0] + " " + randomTile.CoordinateInGrid[1]);
         }
 
         currentTile = randomTile;
         currentTile.ChangeTileContentType(ContentType.reward);
-        Debug.Log("Moving food");
-        Debug.Log(transform.position + " " + currentTile.transform.position);
-        transform.position = currentTile.transform.position;
+        //Debug.Log("Moving food");
+        //Debug.Log(transform.position + " " + transform.localPosition);
+        //Debug.Log("Previous food pos " + transform.localPosition + " " + currentTile.transform.position);
+        //transform.localPosition = currentTile.transform.position;
+        Debug.Log(gameObject);
+        transform.position = transform.position + new Vector3(9999, 9999, 0);
+        //Debug.Log("current food pos " + transform.localPosition + " " + currentTile.transform.position);
     }
 
     public GridManager EnvironmentGridManager { get => environmentGridManager; set => environmentGridManager = value; }

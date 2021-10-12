@@ -43,7 +43,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d67e2135dc469c9438797345dd7f91ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tileWidth: 32
-  tileHeight: 32
+  tileWidth: 1
+  tileHeight: 1
   tilePrefab: {fileID: 5794562523721088847, guid: 8e9b92c4681c69543aa32828048339d0, type: 3}
   areaToFillWithGrid: {fileID: 0}

@@ -21,8 +21,6 @@ public class MoveToGoalSnakeTileBased : Agent
         environmentGridManager.ResetGridContent();
         food.RandomizePosition();
         snake.ResetState();
-
-
     }
 
     public override void CollectObservations(VectorSensor sensor)
@@ -100,22 +98,22 @@ public class MoveToGoalSnakeTileBased : Agent
 
     public void EndGame()
     {
-        AddNegativeAward(-1f);
+        AddNegativeAward(-10f);
         EndEpisode();
 
 
     }
 
-
-    void AddPositiveAward(float awardNum)
+    public void SnakeAteFoodReward(float rewardNum)
     {
-        AddReward(awardNum);
+        AddReward(rewardNum);
         floorSpriteRenderer.color = winColor;
+        food.RandomizePosition();
     }
 
     void AddNegativeAward(float awardNum)
     {
-        AddReward(-1f);
+        AddReward(awardNum);
         floorSpriteRenderer.color = loseColor;
     }
 }

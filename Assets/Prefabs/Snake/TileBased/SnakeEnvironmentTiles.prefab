@@ -436,14 +436,6 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8279490189221645930, guid: bd68bf4abc011c94a9242d6cd0b83d49, type: 3}
-      propertyPath: tileWidth
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8279490189221645930, guid: bd68bf4abc011c94a9242d6cd0b83d49, type: 3}
-      propertyPath: tileHeight
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8279490189221645930, guid: bd68bf4abc011c94a9242d6cd0b83d49, type: 3}
       propertyPath: areaToFillWithGrid
       value: 
       objectReference: {fileID: 5537300898604725593}

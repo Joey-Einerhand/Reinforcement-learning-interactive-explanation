@@ -24,8 +24,18 @@ public class TileBasedSnake : MonoBehaviour
 
     private void Update()
     {
+
         if (Time.time - timeSinceLastMoved >= (1 / tileSpeedPerSecond))
         {
+            int rowsWithRewards = 0;
+            foreach (List<float> contentRow in environmentGridManager.tileContent)
+            {
+                if (contentRow.Contains(3f))
+                {
+                    rowsWithRewards += 1;
+                }
+            }
+            Debug.Log("Rows with rewards: " + rowsWithRewards);
             moveToGoalSnakeTileBased.RequestDecision();
             TryToMove();
 
@@ -86,7 +96,6 @@ public class TileBasedSnake : MonoBehaviour
         // else, eat normal food
         else
         {
-            Debug.Log("Eating food..");
             EatFood(1, 1);
             Move(tileToMoveInto);
         }
@@ -128,9 +137,8 @@ public class TileBasedSnake : MonoBehaviour
 
     public void EatFood(int reward, int amountToGrow)
     {
-        Debug.Log("Eating..");
-        moveToGoalSnakeTileBased.AddReward(1);
-        environmentFood.RandomizePositionDebug();
+        moveToGoalSnakeTileBased.SnakeAteFoodReward(reward);
+        //environmentFood.RandomizePositionDebug();
         //environmentFood.RandomizePosition();
         Grow(amountToGrow);
     }
@@ -151,7 +159,7 @@ public class TileBasedSnake : MonoBehaviour
                 segment.position = _segments[_segments.Count - 1].transform.position;
             }
             snakeSegment.CurrentTile = currentLocationOfHead;
-
+            snakeSegment.CurrentTile.ChangeTileContentType(ContentType.snake);
             _segments.Add(snakeSegment);
 
         }
@@ -185,6 +193,7 @@ public class TileBasedSnake : MonoBehaviour
             randomTile = environmentGridManager.GetRandomTile();
         }
         currentLocationOfHead = randomTile;
+        currentLocationOfHead.ChangeTileContentType(ContentType.snake);
         transform.position = currentLocationOfHead.transform.position;
     }
 

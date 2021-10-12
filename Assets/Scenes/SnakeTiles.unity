@@ -178,6 +178,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SnakeEnvironmentTiles (15)
       objectReference: {fileID: 0}
+    - target: {fileID: 5537300897396633339, guid: d97cc509cf9f7964690a41155deb8260, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d97cc509cf9f7964690a41155deb8260, type: 3}
 --- !u!1001 &123974147
@@ -438,6 +442,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SnakeEnvironmentTiles (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 5537300897396633339, guid: d97cc509cf9f7964690a41155deb8260, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d97cc509cf9f7964690a41155deb8260, type: 3}
 --- !u!1001 &478403476
@@ -494,6 +502,10 @@ PrefabInstance:
     - target: {fileID: 5537300897396633339, guid: d97cc509cf9f7964690a41155deb8260, type: 3}
       propertyPath: m_Name
       value: SnakeEnvironmentTiles (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5537300897396633339, guid: d97cc509cf9f7964690a41155deb8260, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d97cc509cf9f7964690a41155deb8260, type: 3}
@@ -552,6 +564,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SnakeEnvironmentTiles (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 5537300897396633339, guid: d97cc509cf9f7964690a41155deb8260, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d97cc509cf9f7964690a41155deb8260, type: 3}
 --- !u!1001 &689250933
@@ -608,6 +624,10 @@ PrefabInstance:
     - target: {fileID: 5537300897396633339, guid: d97cc509cf9f7964690a41155deb8260, type: 3}
       propertyPath: m_Name
       value: SnakeEnvironmentTiles (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5537300897396633339, guid: d97cc509cf9f7964690a41155deb8260, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d97cc509cf9f7964690a41155deb8260, type: 3}
@@ -723,6 +743,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SnakeEnvironmentTiles (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 5537300897396633339, guid: d97cc509cf9f7964690a41155deb8260, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d97cc509cf9f7964690a41155deb8260, type: 3}
 --- !u!1001 &1127651932
@@ -779,6 +803,10 @@ PrefabInstance:
     - target: {fileID: 5537300897396633339, guid: d97cc509cf9f7964690a41155deb8260, type: 3}
       propertyPath: m_Name
       value: SnakeEnvironmentTiles (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5537300897396633339, guid: d97cc509cf9f7964690a41155deb8260, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d97cc509cf9f7964690a41155deb8260, type: 3}
@@ -837,6 +865,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SnakeEnvironmentTiles (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 5537300897396633339, guid: d97cc509cf9f7964690a41155deb8260, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d97cc509cf9f7964690a41155deb8260, type: 3}
 --- !u!1001 &1410574682
@@ -894,6 +926,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SnakeEnvironmentTiles (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 5537300897396633339, guid: d97cc509cf9f7964690a41155deb8260, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d97cc509cf9f7964690a41155deb8260, type: 3}
 --- !u!1001 &1413125892
@@ -950,6 +986,10 @@ PrefabInstance:
     - target: {fileID: 5537300897396633339, guid: d97cc509cf9f7964690a41155deb8260, type: 3}
       propertyPath: m_Name
       value: SnakeEnvironmentTiles (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5537300897396633339, guid: d97cc509cf9f7964690a41155deb8260, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d97cc509cf9f7964690a41155deb8260, type: 3}
@@ -1069,6 +1109,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SnakeEnvironmentTiles (13)
       objectReference: {fileID: 0}
+    - target: {fileID: 5537300897396633339, guid: d97cc509cf9f7964690a41155deb8260, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d97cc509cf9f7964690a41155deb8260, type: 3}
 --- !u!1001 &1539778487
@@ -1125,6 +1169,10 @@ PrefabInstance:
     - target: {fileID: 5537300897396633339, guid: d97cc509cf9f7964690a41155deb8260, type: 3}
       propertyPath: m_Name
       value: SnakeEnvironmentTiles (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5537300897396633339, guid: d97cc509cf9f7964690a41155deb8260, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d97cc509cf9f7964690a41155deb8260, type: 3}
@@ -1183,6 +1231,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SnakeEnvironmentTiles (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 5537300897396633339, guid: d97cc509cf9f7964690a41155deb8260, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d97cc509cf9f7964690a41155deb8260, type: 3}
 --- !u!1001 &1670039545
@@ -1240,6 +1292,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SnakeEnvironmentTiles (14)
       objectReference: {fileID: 0}
+    - target: {fileID: 5537300897396633339, guid: d97cc509cf9f7964690a41155deb8260, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d97cc509cf9f7964690a41155deb8260, type: 3}
 --- !u!1001 &1863199741
@@ -1296,6 +1352,10 @@ PrefabInstance:
     - target: {fileID: 5537300897396633339, guid: d97cc509cf9f7964690a41155deb8260, type: 3}
       propertyPath: m_Name
       value: SnakeEnvironmentTiles (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5537300897396633339, guid: d97cc509cf9f7964690a41155deb8260, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d97cc509cf9f7964690a41155deb8260, type: 3}
