@@ -27,7 +27,8 @@ public class FoodTileBased : MonoBehaviour
 
         // needs to be executed after getting a random new tile, else the current tile might be a
         // candidate tile to move to
-        if (currentTile != null)
+        // Don't change the tile to empty if there's a snake in it; that means a snake has eaten the food and is now in that tile.
+        if (currentTile != null && currentTile.TileContentType != ContentType.snake)
         {
             currentTile.ChangeTileContentType(ContentType.empty);
         }

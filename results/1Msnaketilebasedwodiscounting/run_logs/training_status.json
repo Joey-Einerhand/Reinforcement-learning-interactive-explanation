@@ -1,0 +1,47 @@
+{
+    "SeekFood": {
+        "checkpoints": [
+            {
+                "steps": 499996,
+                "file_path": "results\\1Msnaketilebasedwodiscounting\\SeekFood\\SeekFood-499996.onnx",
+                "reward": -1.4921402660217655,
+                "creation_time": 1634587411.7553718,
+                "auxillary_file_paths": [
+                    "results\\1Msnaketilebasedwodiscounting\\SeekFood\\SeekFood-499996.pt"
+                ]
+            },
+            {
+                "steps": 999936,
+                "file_path": "results\\1Msnaketilebasedwodiscounting\\SeekFood\\SeekFood-999936.onnx",
+                "reward": -1.3464373464373465,
+                "creation_time": 1634588257.373957,
+                "auxillary_file_paths": [
+                    "results\\1Msnaketilebasedwodiscounting\\SeekFood\\SeekFood-999936.pt"
+                ]
+            },
+            {
+                "steps": 1000073,
+                "file_path": "results\\1Msnaketilebasedwodiscounting\\SeekFood\\SeekFood-1000073.onnx",
+                "reward": -1.3480392156862746,
+                "creation_time": 1634588257.442036,
+                "auxillary_file_paths": [
+                    "results\\1Msnaketilebasedwodiscounting\\SeekFood\\SeekFood-1000073.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 1000073,
+            "file_path": "results\\1Msnaketilebasedwodiscounting\\SeekFood.onnx",
+            "reward": -1.3480392156862746,
+            "creation_time": 1634588257.442036,
+            "auxillary_file_paths": [
+                "results\\1Msnaketilebasedwodiscounting\\SeekFood\\SeekFood-1000073.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.27.0",
+        "torch_version": "1.7.1+cu110"
+    }
+}

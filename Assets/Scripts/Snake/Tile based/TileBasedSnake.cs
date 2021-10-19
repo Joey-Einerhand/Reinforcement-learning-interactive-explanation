@@ -14,7 +14,10 @@ public class TileBasedSnake : MonoBehaviour
     [SerializeField] FoodTileBased environmentFood;
     [SerializeField] GridManager environmentGridManager;
     private Tile currentLocationOfHead;
-
+    // This counter counts the steps since a last major event, like
+    // eating a piece of food, or the last episode end.
+    // used for punishing the snake for looping too much without doing anything.
+    private int stepsSinceLastMajorAction = 0;
 
     private void Start()
     {
@@ -24,6 +27,12 @@ public class TileBasedSnake : MonoBehaviour
 
     private void Update()
     {
+        // random number. End a round if this number has been reached
+        if (stepsSinceLastMajorAction >= 150)
+        {
+            moveToGoalSnakeTileBased.EndEpisode();
+            return;
+        }
 
         if (Time.time - timeSinceLastMoved >= (1 / tileSpeedPerSecond))
         {
@@ -38,8 +47,9 @@ public class TileBasedSnake : MonoBehaviour
             Debug.Log("Rows with rewards: " + rowsWithRewards);
             moveToGoalSnakeTileBased.RequestDecision();
             TryToMove();
-
         }
+
+        stepsSinceLastMajorAction += 1;
 
     }
 
@@ -144,6 +154,7 @@ public class TileBasedSnake : MonoBehaviour
         //environmentFood.RandomizePositionDebug();
         //environmentFood.RandomizePosition();
         Grow(amountToGrow);
+        stepsSinceLastMajorAction = 0;
     }
 
     public void Grow(int amountToGrow)
@@ -177,6 +188,7 @@ public class TileBasedSnake : MonoBehaviour
     {
         this.direction = Vector2.right;
         RandomizePosition();
+        stepsSinceLastMajorAction = 0;
 
         for (int i = 0; i < _segments.Count; i++) {
             Destroy(_segments[i].gameObject);

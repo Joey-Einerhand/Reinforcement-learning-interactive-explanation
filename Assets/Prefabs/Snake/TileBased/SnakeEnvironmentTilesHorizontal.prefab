@@ -202,7 +202,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_BrainParameters:
-    VectorObservationSize: 42
+    VectorObservationSize: 102
     NumStackedVectorObservations: 1
     m_ActionSpec:
       m_NumContinuousActions: 0
@@ -267,7 +267,7 @@ Transform:
   m_GameObject: {fileID: 5760723329275192015}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 10, y: 4, z: 1}
+  m_LocalScale: {x: 10, y: 10, z: 1}
   m_Children: []
   m_Father: {fileID: 5760723328667114870}
   m_RootOrder: 2
@@ -378,7 +378,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 10, y: 4}
+  m_Size: {x: 10, y: 10}
   m_EdgeRadius: 0
 --- !u!1001 &2913787071693297175
 PrefabInstance:
@@ -439,6 +439,86 @@ PrefabInstance:
       propertyPath: areaToFillWithGrid
       value: 
       objectReference: {fileID: 5760723330144159445}
+    - target: {fileID: 8279490189221645930, guid: bd68bf4abc011c94a9242d6cd0b83d49, type: 3}
+      propertyPath: indicesOfRowsToConvertToWalls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8279490189221645930, guid: bd68bf4abc011c94a9242d6cd0b83d49, type: 3}
+      propertyPath: indicesColumnsToConvertToWalls.Array.size
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8279490189221645930, guid: bd68bf4abc011c94a9242d6cd0b83d49, type: 3}
+      propertyPath: indicesOfRowsToConvertToWalls.Array.data[1]
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 8279490189221645930, guid: bd68bf4abc011c94a9242d6cd0b83d49, type: 3}
+      propertyPath: indicesOfRowsToConvertToWalls.Array.data[2]
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 8279490189221645930, guid: bd68bf4abc011c94a9242d6cd0b83d49, type: 3}
+      propertyPath: indicesOfRowsToConvertToWalls.Array.data[3]
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 8279490189221645930, guid: bd68bf4abc011c94a9242d6cd0b83d49, type: 3}
+      propertyPath: indicesOfRowsToConvertToWalls.Array.data[4]
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 8279490189221645930, guid: bd68bf4abc011c94a9242d6cd0b83d49, type: 3}
+      propertyPath: indicesOfRowsToConvertToWalls.Array.data[5]
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 8279490189221645930, guid: bd68bf4abc011c94a9242d6cd0b83d49, type: 3}
+      propertyPath: indicesOfRowsToConvertToWalls.Array.data[6]
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 8279490189221645930, guid: bd68bf4abc011c94a9242d6cd0b83d49, type: 3}
+      propertyPath: indicesOfRowsToConvertToWalls.Array.data[7]
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 8279490189221645930, guid: bd68bf4abc011c94a9242d6cd0b83d49, type: 3}
+      propertyPath: indicesOfRowsToConvertToWalls.Array.data[8]
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 8279490189221645930, guid: bd68bf4abc011c94a9242d6cd0b83d49, type: 3}
+      propertyPath: indicesOfRowsToConvertToWalls.Array.data[9]
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 8279490189221645930, guid: bd68bf4abc011c94a9242d6cd0b83d49, type: 3}
+      propertyPath: indicesColumnsToConvertToWalls.Array.data[1]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8279490189221645930, guid: bd68bf4abc011c94a9242d6cd0b83d49, type: 3}
+      propertyPath: indicesColumnsToConvertToWalls.Array.data[2]
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8279490189221645930, guid: bd68bf4abc011c94a9242d6cd0b83d49, type: 3}
+      propertyPath: indicesColumnsToConvertToWalls.Array.data[3]
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8279490189221645930, guid: bd68bf4abc011c94a9242d6cd0b83d49, type: 3}
+      propertyPath: indicesColumnsToConvertToWalls.Array.data[4]
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8279490189221645930, guid: bd68bf4abc011c94a9242d6cd0b83d49, type: 3}
+      propertyPath: indicesColumnsToConvertToWalls.Array.data[5]
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8279490189221645930, guid: bd68bf4abc011c94a9242d6cd0b83d49, type: 3}
+      propertyPath: indicesColumnsToConvertToWalls.Array.data[6]
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8279490189221645930, guid: bd68bf4abc011c94a9242d6cd0b83d49, type: 3}
+      propertyPath: indicesColumnsToConvertToWalls.Array.data[7]
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 8279490189221645930, guid: bd68bf4abc011c94a9242d6cd0b83d49, type: 3}
+      propertyPath: indicesColumnsToConvertToWalls.Array.data[8]
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 8279490189221645930, guid: bd68bf4abc011c94a9242d6cd0b83d49, type: 3}
+      propertyPath: indicesColumnsToConvertToWalls.Array.data[9]
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bd68bf4abc011c94a9242d6cd0b83d49, type: 3}
 --- !u!4 &7122091006156856741 stripped

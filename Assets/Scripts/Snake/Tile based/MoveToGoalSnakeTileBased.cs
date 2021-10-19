@@ -107,8 +107,8 @@ public class MoveToGoalSnakeTileBased : Agent
         // Assuming there's only one type of food and it gives exactly 1 reward when eaten
         // make the reward negative to punish snake for taking steps
         float maxNegativeRewardForStep = -1 * (1 / maxAmountOfTilesToMove);
-        //AddReward(maxNegativeRewardForStep);
-        AddReward(-0.05f);
+        AddReward(maxNegativeRewardForStep);
+        //AddReward(-0.05f);
     }
 
     public void EndGame()

@@ -1,0 +1,38 @@
+{
+    "SeekFood": {
+        "checkpoints": [
+            {
+                "steps": 499994,
+                "file_path": "results\\snakeTilebasedWithWallTrainingNoDiscounting\\SeekFood\\SeekFood-499994.onnx",
+                "reward": -1.6813008130081302,
+                "creation_time": 1634585694.9084618,
+                "auxillary_file_paths": [
+                    "results\\snakeTilebasedWithWallTrainingNoDiscounting\\SeekFood\\SeekFood-499994.pt"
+                ]
+            },
+            {
+                "steps": 500001,
+                "file_path": "results\\snakeTilebasedWithWallTrainingNoDiscounting\\SeekFood\\SeekFood-500001.onnx",
+                "reward": -1.6815597075548334,
+                "creation_time": 1634585695.2454617,
+                "auxillary_file_paths": [
+                    "results\\snakeTilebasedWithWallTrainingNoDiscounting\\SeekFood\\SeekFood-500001.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 500001,
+            "file_path": "results\\snakeTilebasedWithWallTrainingNoDiscounting\\SeekFood.onnx",
+            "reward": -1.6815597075548334,
+            "creation_time": 1634585695.2454617,
+            "auxillary_file_paths": [
+                "results\\snakeTilebasedWithWallTrainingNoDiscounting\\SeekFood\\SeekFood-500001.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.27.0",
+        "torch_version": "1.7.1+cu110"
+    }
+}
