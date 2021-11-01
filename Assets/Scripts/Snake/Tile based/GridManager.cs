@@ -51,6 +51,7 @@ public class GridManager : MonoBehaviour
 
                 Tile spawnedTile = Instantiate(tilePrefab, new Vector2(xToSpawnTileAt, yToSpawnTileAt), Quaternion.identity);
                 spawnedTile.transform.parent = transform;
+                spawnedTile.transform.localScale = new Vector3(1, 1, 1);
                 spawnedTile.name = $"Tile {x} {y}";
                 spawnedTile.OwnGridManager = this;
                 spawnedTile.CoordinateInGrid = new int[] { x, y };

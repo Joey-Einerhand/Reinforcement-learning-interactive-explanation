@@ -13,6 +13,7 @@ public class TileBasedSnake : MonoBehaviour
     public MoveToGoalSnakeTileBased moveToGoalSnakeTileBased;
     [SerializeField] FoodTileBased environmentFood;
     [SerializeField] GridManager environmentGridManager;
+    [SerializeField] bool currentlyTraining = false;
     private Tile currentLocationOfHead;
     // This counter counts the steps since a last major event, like
     // eating a piece of food, or the last episode end.
@@ -28,7 +29,7 @@ public class TileBasedSnake : MonoBehaviour
     private void Update()
     {
         // random number. End a round if this number has been reached
-        if (stepsSinceLastMajorAction >= 150)
+        if (currentlyTraining && stepsSinceLastMajorAction >= 150)
         {
             moveToGoalSnakeTileBased.EndEpisode();
             return;

@@ -19,11 +19,11 @@ public class Tile : MonoBehaviour
     int[] coordinateInGrid = new int[2];
 
     // these are default; edit the colors in the editor
-    [SerializeField] Color emptyColor = Color.gray;
-    [SerializeField] Color wallColor = Color.black;
-    [SerializeField] Color rewardColor = Color.red;
-    [SerializeField] Color snakeHeadColor = Color.blue;
-    [SerializeField] Color snakeBodyColor = Color.cyan;
+    Color emptyGreyColor = new Color(0.8f, 0.8f, 0.8f);
+    Color wallColor = Color.black;
+    Color rewardColor = Color.green;
+    Color snakeColor = Color.blue;
+
 
 
 
@@ -39,20 +39,24 @@ public class Tile : MonoBehaviour
         switch(typeToChangeTo)
         {
             case ContentType.empty:
-                if (coordinateInGrid[0] % 2 == 0 && coordinateInGrid[1] % 2 == 0)
+                if ((coordinateInGrid[0] %  2 == 0) && (coordinateInGrid[1] % 2 == 0))
+                {
+                    ownSpriteRenderer.color = Color.white;
+                }
+                else if ((coordinateInGrid[0] % 2 == 1) && (coordinateInGrid[1] % 2 == 1))
                 {
                     ownSpriteRenderer.color = Color.white;
                 }
                 else
                 {
-                    ownSpriteRenderer.color = Color.grey;
+                    ownSpriteRenderer.color = emptyGreyColor;
                 }    
                 break;
             case ContentType.wall:
                 ownSpriteRenderer.color = wallColor;
                 break;
             case ContentType.snake:
-                ownSpriteRenderer.color = snakeHeadColor;
+                ownSpriteRenderer.color = snakeColor;
                 break;
             case ContentType.reward:
                 ownSpriteRenderer.color = rewardColor;
