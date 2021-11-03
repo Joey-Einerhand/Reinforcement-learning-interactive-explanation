@@ -51,6 +51,7 @@ public class MLHandler : MonoBehaviour
         foreach (Agent agent in agents)
         {
             agent.SetModel("MoveToGoal", brainModels[brainIndexToUse]);
+            agent.EndEpisode();
         }
     }
 

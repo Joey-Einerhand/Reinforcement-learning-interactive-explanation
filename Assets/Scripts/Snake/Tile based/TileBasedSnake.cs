@@ -168,13 +168,14 @@ public class TileBasedSnake : MonoBehaviour
             if (snakeSegment.SnakeSegmentNumber == 0)
             {
                 segment.position = transform.position;
+                snakeSegment.CurrentTile = currentLocationOfHead;
             }
             else
             {
                 segment.position = _segments[_segments.Count - 1].transform.position;
+                snakeSegment.CurrentTile = _segments[_segments.Count - 1].CurrentTile;
             }
-            snakeSegment.CurrentTile = currentLocationOfHead;
-            snakeSegment.CurrentTile.ChangeTileContentType(ContentType.snake);
+            //snakeSegment.CurrentTile.ChangeTileContentType(ContentType.snake);
             _segments.Add(snakeSegment);
 
         }
