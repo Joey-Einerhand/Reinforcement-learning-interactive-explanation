@@ -21,8 +21,8 @@ public class Tile : MonoBehaviour
     // these are default; edit the colors in the editor
     Color emptyGreyColor = new Color(0.8f, 0.8f, 0.8f);
     Color wallColor = Color.black;
-    Color rewardColor = Color.green;
-    Color snakeColor = Color.blue;
+    Color rewardColor = new Color(1, 0.855f, 0.078f);
+    Color snakeColor = new Color(0f, 0.867f, 1f);
 
 
 
