@@ -89,7 +89,7 @@ To run the the application using Docker you need to have a builded version of th
 In order to easily share the Docker image of the builded version of the application you can export the Docker image to a .tar-file. For instructions on how to export a Docker image to a .tar-file you can use the following steps:
 
 1. Navigate to the desired folder where te Docker image will be exported to using the terminal.
-2. Run the following command `docker save demonstrator -o demonstrator_container.tar` to export the Docker image to a .tar-file. Pay attention to the naming of the image and the .tar-file.
+2. Run the following command `docker save demonstrator -o demonstrator_image.tar` to export the Docker image to a .tar-file. Pay attention to the naming of the image and the .tar-file.
 
 You can go back to 1.1. Running with Docker to follow the instructions in order to convert the .tar-file back into a Docker image and run the application on a webpage inside a Docker container. 
 
