@@ -1,6 +1,8 @@
 # Reinforcement-learning-interactive-explanation
 A small interactive experience which aims to teach how reinforcement learning works.
 
+Demo: https://joeyehand.itch.io/reinforcement-learning
+
 ## 1. Usage
 
 This chapter contains instructions for running a completed version of the application (builded version).
